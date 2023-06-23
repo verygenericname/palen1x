@@ -35,14 +35,9 @@ jobs:
           cp work/*-${{ matrix.arch }}.iso palen1x
           cp work/iso/boot/initramfs.xz palen1x/initramfs-${{ matrix.arch }}.xz
 
-      - name: Upload artifact to cdn.nickchan.lol
-        uses: wangyucode/sftp-upload-action@v1.4.8
+      - name: Upload Latest Artifact
+        uses: actions/upload-artifact@v3
         with:
-          host: ${{ secrets.NICKCHAN_FTP_HOST }}
-          port: ${{ secrets.NICKCHAN_FTP_PORT }}
-          username: palera1n
-          privateKey: ${{ secrets.NICKCHAN_FTP_KEY }}
-          forceUpload: true
-          dryRun: false
-          localDir: 'palen1x/'
-          remoteDir: '/palera1n/artifacts/palen1x/release'
+          name: iso
+          path: |
+            palen1x/palen1x-amd64.iso
