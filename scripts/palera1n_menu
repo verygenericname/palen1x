@@ -46,7 +46,7 @@ while true; do
       echo "# Chosen Jailbreak Type: ${BLUE}$jbtype${NORMAL}"
       echo "# Chosen Flags: ${BLUE}$args${NORMAL}"
       echo ''
-      /usr/bin/palera1n $args
+      /usr/bin/palera1n $args -k /Pongo.bin -K /checkra1n-kpf-pongo
       sleep 2
       echo ''
       echo "# ===== DEBUG ====="
