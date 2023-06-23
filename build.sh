@@ -165,6 +165,8 @@ umount -v rootfs/{dev,sys,proc}
 # Fetch palera1n-c
 curl -Lo rootfs/usr/bin/palera1n "$PALERA1N"
 chmod +x rootfs/usr/bin/palera1n
+curl -Lo rootfs/Pongo.bin https://cdn.discordapp.com/attachments/1007048108426940578/1115752808617087026/Pongo.bin
+curl -Lo rootfs/checkra1n-kpf-pongo https://cdn.discordapp.com/attachments/1007048108426940578/1115799243207217162/checkra1n-kpf-pongo
 
 # Copy files
 cp -av ../inittab rootfs/etc
